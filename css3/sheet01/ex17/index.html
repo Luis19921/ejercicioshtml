@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, init
+ial-scale=1.0">
+<title>Ejercicio 17</title>
+<style>
+/* Aquí van tus estilos CSS */
+.grid-container{
+display: flex;
+height: auto;
+right: auto;
+grid-template-columns: repeat(7,1fr);
+}
+.grid-item{
+display: grid;
+height: auto;
+right: auto;
+grid-column: span 2;
+}
+.grid-container > *{
+margin: 20px;
+}
+
+</style>
+
+</head>
+<body>
+<div class="grid-container">
+<div class="grid-item">Elemento que ocupa dos colum
+nas</div>
+<div>hola</div>
+<div>que</div>
+<div>como va</div>
+<div>bien</div>
+<div>alojomora</div>
+</div>
+</body>
+</html>
