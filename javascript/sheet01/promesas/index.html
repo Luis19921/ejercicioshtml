@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function operacionAsincrona1() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            let exito = Math.round(Math.random());
+            if (exito) { 
+                resolve("Operación con éxito1");
+            } else {
+                resolve(new error("Ocurrió un error1"));
+            }
+        }, 0;
+    })
+}
+    async function ejecutaroperacion() {
+        let Holiwi = await operacionAsincrona1();
+        console.log(Holiwi);
+    }
+    ejecutaroperacion(operacionAsincrona1)
+    function operacionAsincrona2() {
+      return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        let exito = Math.round(Math.random());
+        if (exito) { 
+            resolve("Operación con éxito2");
+        } else {
+            resolve(new error("Ocurrió un error2"));
+        }
+    }, 2000;
+})
+  
+    async function ejecutaroperacion() {
+        let Adiós = await operacionAsincrona2();
+        console.log(Adiós);
+    }
+    ejecutaroperacion()
+    function operacionAsincrona3() {
+      return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        let exito = Math.round(Math.random());
+        if (exito) { 
+            resolve("Operación con éxito3");
+        } else {
+            reject(new Error("Ocurrió un error3");
+
+        }
+    }, 5000;
+}) 
+    
+    async function ejecutaroperacion(operacionAsincrona2) {
+        let Final = await operacionAsincrona3();
+        console.log(Final);
+    }
+    operacionAsincrona1()
+    .then((res) =>{
+        console.log(resp);
+        return operacionAsincrona2(resp);
+    })
+    operacionAsincrona2()
+    .then((resp) =>{
+        console.log(resp);
+        return operacionAsincrona2(resp);
+    })
+    .then((resp) =>{
+        console.log(resultado);
+    })
+},1000)
+    
+    </script>
+
+    
+</body>
+</html>
